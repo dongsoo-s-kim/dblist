@@ -1,5 +1,6 @@
 #ifndef DBLIST_H
 #define DBLIST_H
+#include <stdio.h>
 
 typedef struct dblist_t {
   int num;
@@ -10,8 +11,8 @@ dblist  dbl_create(int n);
 dblist  dbl_make(int n, double *vlist); 
 void    dbl_clean(dblist *db);
 
-int     dbl_print(const dblist db, char *format);
-int     dbl_scan (dblist *db);
+int     dbl_print(FILE *fp, const dblist db, char *format);
+int     dbl_scan (FILE *fp, dblist *db);
 dblist  dbl_zeros(int n);
 dblist  dbl_ones (int n);
 dblist  dbl_random(int n, double mean, double stddev); 
