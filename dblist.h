@@ -24,7 +24,6 @@ dblist  poly_integrate (dblist poly);
 dblist  poly_derive(dblist poly);
 
 dblist  dot_product(dblist a, dblist b);
-dblist  convulsion(dblist a, dblist b); 
-
+dblist  convolution(dblist a, dblist b); 
 
 #endif
