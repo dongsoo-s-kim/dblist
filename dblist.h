@@ -21,4 +21,10 @@ double  dbl_sum(dblist db);
 double  poly_eval_x    (dblist poly, double x);
 dblist  poly_eval_xlist(dblist poly, dblist xlist);
 dblist  poly_integrate (dblist poly);
+dblist  poly_derive(dblist poly);
+
+dblist  dot_product(dblist a, dblist b);
+dblist  convulsion(dblist a, dblist b); 
+
+
 #endif
