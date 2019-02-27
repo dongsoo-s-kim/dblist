@@ -1,3 +1,7 @@
+/*
+  dbl-test1.c
+  Copyright (C) 2019 Dongsoo S. Kim
+ */
 #include "dblist.h"
 #include <stdio.h>
 

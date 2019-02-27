@@ -1,3 +1,7 @@
+/*
+  dblist.h
+  Copyright (C) 2019 Dongsoo S. Kim
+ */
 #ifndef DBLIST_H
 #define DBLIST_H
 #include <stdio.h>
