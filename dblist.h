@@ -32,7 +32,7 @@ int     dbl_count       (const dblist v);
 dblist  map      (double (*func)(double, void *), dblist v, void *arg);
 double  reduce   (double (*func)(double, double, void *), dblist v, void *arg);
 dblist  filter   (bool   (*func)(double, void *), dblist v, void *arg); 
-dblist  dot_prod (const dblist a, const dblist b);
+double  dot_prod (const dblist a, const dblist b);
 
 double  poly_eval_x     (const dblist poly, double x);
 dblist  poly_eval_xlist (const dblist poly, const dblist xlist);
