@@ -2,7 +2,7 @@ dblist  dbl_create(int n);                                      // lab7
 dblist  dbl_make (int n, double *vlist);                        // lab7
 void    dbl_clean(dblist *v);                                   // lab7
 int     dbl_print(FILE *fp, const dblist v, char *format);      // startup
-int     dbl_scan (FILE *fp, dblist *v);                         // lab9, honor
+int     dbl_scan (FILE *fp, dblist *v);                         // lab9(honor)
 dblist  dbl_zeros(int n);                                       // startup
 dblist  dbl_ones (int n);                                       // startup
 dblist  dbl_rand_normal (int n, double mean, double stddev);    // startup
