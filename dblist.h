@@ -29,9 +29,12 @@ double  dbl_mean        (const dblist v);
 double  dbl_stddev      (const dblist v);
 int     dbl_count       (const dblist v); 
 
-dblist  map      (double (*func)(double, void *), dblist v, void *arg);
-double  reduce   (double (*func)(double, double, void *), dblist v, void *arg);
-dblist  filter   (bool   (*func)(double, void *), dblist v, void *arg); 
+dblist  map      (double (*func)(double, void *), const dblist v, void *arg);
+double  reduce   (double (*func)(double, double, void *), const dblist v, void *arg);
+dblist  filter   (bool   (*func)(double, void *), const dblist v, void *arg); 
+dblist  shift_up   (const dblist v, int n);
+dblist  shift_down (const dblist v, int n); 
+dblist  add      (const dblist a, const dblist b);
 dblist  prod     (const dblist a, const dblist b); 
 double  dot_prod (const dblist a, const dblist b);
 
