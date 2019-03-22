@@ -5,7 +5,7 @@
 #include "dblist.h"
 #include <stdlib.h>
 
-dblist  dbl_create(int n)
+inline dblist dbl_create(int n)
 {
   dblist x;
   x.num = n;
@@ -21,10 +21,14 @@ dblist dbl_make(int n, double *vlist)
   return x;
 }
 
-
-void    dbl_clean(dblist *db)
+inline void dbl_clean(dblist *db)
 {
   free(db->val);
   db->val = NULL;
   db->num = 0;
+}
+
+inline int dbl_count(const dblist v)
+{
+  return v.num;
 }
