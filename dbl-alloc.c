@@ -4,6 +4,7 @@
  */
 #include "dblist.h"
 #include <stdlib.h>
+#include <string.h>
 
 inline dblist dbl_create(int n)
 {
@@ -13,11 +14,10 @@ inline dblist dbl_create(int n)
   return x;
 }
 
-dblist dbl_make(int n, double *vlist)
+inline dblist dbl_make(int n, double *vlist)
 {
   dblist x = dbl_create(n);
-  for (int i=0; i<x.num; i++)
-    x.val[i] = vlist[i];
+  memcpy(x.val, vlist, sizeof(double) * n);
   return x;
 }
 
