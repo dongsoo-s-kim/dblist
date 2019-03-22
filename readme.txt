@@ -1,3 +1,25 @@
+dbl-alloc.c: 
+	dbl_create()
+	dbl_make()
+	dbl_clean()
+	dbl_count()
+
+dbl-init.c:
+	dbl_zeros()
+	dbl_ones ()
+	dbl_range()
+	dbl_rand_normal() [deprecated]
+	
+dbl-print.c:
+	dbl_print()
+
+generator.c:
+	init_norm()
+	init_unif()
+	init_expo()
+	dbl_random()
+
+By functions: 
 dblist  dbl_create(int n);                                      // lab7 [dbl-alloc.c]
 dblist  dbl_make (int n, double *vlist);                        // lab7 [dbl-alloc.c]
 void    dbl_clean(dblist *v);                                   // lab7 [dbl-alloc.c]
@@ -5,7 +27,7 @@ int     dbl_print(FILE *fp, const dblist v, char *format);      // startup [dbl-
 int     dbl_scan (FILE *fp, dblist *v);                         // lab9(honor)
 dblist  dbl_zeros(int n);                                       // startup [dbl-init.c]
 dblist  dbl_ones (int n);                                       // startup [dbl-init.c]
-dblist  dbl_rand_normal (int n, double mean, double stddev);    // startup [dbl-init.c]
+dblist  dbl_rand_normal (int n, double mean, double stddev);    // startup [dbl-init.c], deprecated
 dblist  dbl_rand_uniform(int n, double min, double max);        // deprecated
 dblist  dbl_rand_exp(int n, double mean);             		// deprecated
 dblist  dbl_range   (double start, double end, double delta);   // lab7 [dbl-init.c]
