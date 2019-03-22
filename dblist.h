@@ -7,6 +7,14 @@
 #include <stdio.h>
 #include <stdbool.h>
 
+#define MAX_GEN_ARGS 2
+
+typedef struct generator_t {
+  int    acnt;
+  double args[MAX_GEN_ARGS];
+  double (*func)();
+} generator;
+
 typedef struct dblist_t {
   int num;
   double *val;
@@ -27,7 +35,14 @@ dblist  dbl_range	(double start, double end, double delta);
 double  dbl_sum		(const dblist v);
 double  dbl_mean        (const dblist v);
 double  dbl_stddev      (const dblist v);
-int     dbl_count       (const dblist v); 
+int     dbl_count       (const dblist v);
+
+/* flexible random generator */ 
+generator init_norm(double mean, double stddev); 
+generator init_unif(double min, double max); 
+generator init_expo(double mean); 
+dblist dbl_random(int n, generator gen); 
+
 
 dblist  map      (double (*func)(double, void *), const dblist v, void *arg);
 double  reduce   (double (*func)(double, double, void *), const dblist v, void *arg);
