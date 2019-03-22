@@ -25,6 +25,17 @@ dblist  dbl_ones (int n)
   return x;
 }
 
+dblist  dbl_range(double start, double end, double delta)
+{
+  dblist x;
+  int n = (int)((end - start) / delta + 0.5);
+  x = dbl_create(n);
+  for (int i=0; i<n; i++, start += delta)
+    x.val[i] = start;
+  return x;
+}
+
+
 dblist  dbl_rand_normal(int n, double mean, double stddev)
 {
   dblist x;

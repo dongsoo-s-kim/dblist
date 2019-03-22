@@ -8,7 +8,7 @@ dblist  dbl_ones (int n);                                       // startup [dbl-
 dblist  dbl_rand_normal (int n, double mean, double stddev);    // startup [dbl-init.c]
 dblist  dbl_rand_uniform(int n, double min, double max);        // deprecated
 dblist  dbl_rand_exp(int n, double mean);             		// deprecated
-dblist  dbl_range   (double start, double end, double delta);   // lab7
+dblist  dbl_range   (double start, double end, double delta);   // lab7 [dbl-init.c]
 double  dbl_sum      (const dblist v);                          // lab7, lab9
 double  dbl_mean    (const dblist v);                           // lab9
 double  dbl_stddev  (const dblist v);                           // lab9
